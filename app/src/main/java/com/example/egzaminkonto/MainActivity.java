@@ -1,6 +1,10 @@
 package com.example.egzaminkonto;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +14,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText emailInput, hasloInput, powhasloInput;
+    private TextView komunikat;
+    private Button zatwierdz;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +27,26 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        emailInput = findViewById(R.id.emailInput);
+        hasloInput = findViewById(R.id.podajHasloInput);
+        powhasloInput = findViewById(R.id.powtorzHasloInput);
+        komunikat = findViewById(R.id.powitanieText);
+        zatwierdz = findViewById(R.id.zatwierdzButton);
+
+        zatwierdz.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        sprawdzanie();
+                    }
+                }
+        );
+
+
+
+    }
+    private void sprawdzanie(){
+
     }
 }
