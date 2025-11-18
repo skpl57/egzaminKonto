@@ -8,65 +8,136 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/resetujKonto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#008080"
-        android:textColor="@color/white"
-        android:textSize="32sp"
-        android:text="Resetuj konto" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/pET"
+        <TextView
+            android:id="@+id/resetujKonto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#008080"
+            android:text="Resetuj konto"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/pET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Podaj Email:" />
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/poHT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Podaj hasło:" />
+
+        <EditText
+            android:id="@+id/podajHasloInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/pHT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Powtórz hasło:" />
+
+        <EditText
+            android:id="@+id/powtorzHasloInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/zatwierdzButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Zatwierdz" />
+
+        <TextView
+            android:id="@+id/powitanieText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Autor 00000000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:paddingLeft="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Podaj Email:" />
 
-    <EditText
-        android:id="@+id/emailInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/poHT"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Podaj hasło:" />
+        <Button
+            android:id="@+id/generujButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Generuj hasło" />
 
-    <EditText
-        android:id="@+id/podajHasloInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+        <Button
+            android:id="@+id/sprawdzMocButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sprawdz moc" />
 
-    <TextView
-        android:id="@+id/pHT"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Powtórz hasło:" />
+        <TextView
+            android:id="@+id/duzeLiteryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:text="- Duze litery" />
 
-    <EditText
-        android:id="@+id/powtorzHasloInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+        <TextView
+            android:id="@+id/maleLiteryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:text="- Male litery" />
 
-    <Button
-        android:id="@+id/zatwierdzButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Zatwierdz" />
+        <TextView
+            android:id="@+id/znakiSpecjalneText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:text="- Znaki specjalne" />
 
-    <TextView
-        android:id="@+id/powitanieText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Autor 00000000000" />
+        <TextView
+            android:id="@+id/cyfryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:text="- Cyfry" />
+
+        <TextView
+            android:id="@+id/dlugoscText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:text="- Długość 12" />
+    </LinearLayout>
+
 </LinearLayout>
